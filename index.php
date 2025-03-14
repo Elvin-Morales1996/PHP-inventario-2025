@@ -1,6 +1,6 @@
 <?php include "./inc/session_start.php";  ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <?php include "./inc/head.php";?>
 </head>

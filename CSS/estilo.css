@@ -1,0 +1,50 @@
+
+body, html {
+    height: 100%;
+    width: 100%;
+  /*background-color: aliceblue;*/
+    
+}
+
+/*estilo al login*/
+.main-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*login y 404*/
+.main-container > .login,
+.main-container > .hero-body{
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.fom-inline{
+    display: inline-flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -19,9 +19,39 @@ Es más seguro y flexible que mysqli.
 
 */
 
+//conexion a la base de datos usando PDO
 function conexion(){
     $pdo = new PDO('mysql:host=localhost;dbname=inventario', 'root', '');
     return $pdo;
 
 }
+
+
+//VALIDAR FORMULARIOS con EXPRESIONES REGULARES
+function verificar_datos($filtro, $cadena){
+    /**$filtro: Es la expresión regular que define el formato permitido.
+    $cadena: Es el texto que se validará.
+    preg_match("/^".$filtro."$/", $cadena): Compara la cadena con el filtro.
+^ y $ aseguran que toda la cadena debe cumplir el filtro.
+Si cumple la expresión, devuelve false (porque la validación es correcta).
+Si no cumple, devuelve true (porque la validación falla).
+ */
+
+ /**Expresión regular [a-zA-Z]{5,10}
+
+Solo permite letras mayúsculas y minúsculas (a-zA-Z).
+Debe tener entre 5 y 10 caracteres.
+$nombre = "el"; → "el" tiene solo 2 caracteres, por lo que NO cumple la validación.
+
+verificar_datos() devuelve true, entonces se muestra "Nombre no válido". */
+    if (preg_match("/^".$filtro."$/", $cadena)) {
+        return false;
+    }else{
+        return true;
+    }
+}
+
+
+
+
 ?>

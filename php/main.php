@@ -153,4 +153,6 @@ function renombrar_fotos($nombre){
 	}
 
 
+
+
 ?>
